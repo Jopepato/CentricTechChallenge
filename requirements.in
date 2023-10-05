@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+plotly
+jupyter
+ipykernel
+watermark
+jupyter_contrib_nbextensions
+pydantic>=1.4.0,<2
+keras
