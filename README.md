@@ -1,8 +1,13 @@
 # Centric Software - Machine learning task
 
 This repository has been created by José Pérez-Parras Toledano, to execute the technical challenge from Centric Software.
-Documentation can be found in this README file, as well as instructions on how to run the diffeernt parts of the task.
+Documentation can be found in this README file, as well as instructions on how to run the different parts of the task.
 Data has been saved in the repository as well, so that everything is in one place.
+
+I have created a repository to store some of the functions used throughout the notebook for future reuse of them. I have also
+converted this repository into a python package so that we can use the different functions in the jupyter notebook. This is a simplification
+of what a python package would look like, I would usually use `cookiecutter` for this as it's a template for python repositories,
+but not add complexity to the task and to save some time, I've just added the necessary items and files for the task.
 
 ## How to install dependencies
 I've created a Makefile file to make things simpler, to create an environment with the packages used to run the notebook and the task
@@ -12,6 +17,7 @@ make create_environment
 source centric/bin/activate
 make install_requirements
 make add_kernel_to_jupyter
+make dev_install
 ```
 
 Once we have run those commands we will be able to run the cells in the jupyter notebook.
