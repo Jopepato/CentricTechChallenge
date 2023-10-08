@@ -1,6 +1,6 @@
 # Task 4 - SQL and Django ORM queries
 Based on the following schema of tables/objects:
-![schema](docs/schema.png)
+![schema](schema.png)
 
 We have to create a SQL query, that addresses the following statements:
 Write a query (either in django ORM or in SQL) to extract, for every existing
