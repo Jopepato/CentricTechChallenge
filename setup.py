@@ -5,7 +5,7 @@ import pathlib
 import pkg_resources
 
 with pathlib.Path('requirements.txt').open() as requirements_txt:
-    install_requires = [
+    req_packages = [
         str(requirement)
         for requirement
         in pkg_resources.parse_requirements(requirements_txt)
@@ -15,5 +15,8 @@ setup(
     name="centric",
     version="0.0.1",
     packages=find_packages(),
-    install_requires=install_requires,
+    install_requires=req_packages,
+    package_data={'conf': ['conf/dataset.toml']},
+    include_package_data=True,
+
 )
