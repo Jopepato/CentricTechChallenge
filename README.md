@@ -24,6 +24,15 @@ Once we have run those commands we will be able to run the cells in the jupyter 
 
 ## Task 1 and 2
 
+For these 2 tasks I've added functions to the source code, you can check those in the `centric` folder and the tests in `tests`.
+As well as creating two notebooks, which is better to follow as they will have all the reasoning of the steps followed and will use
+the functions declared in the source code. A problem encountered is the size of the data, which could not be added to the repository,
+so you will have to run the first notebook: `data_loading_and_eda.ipynb` in order to create the different splits of the data that are later used
+in the second notebook: `model_creation_and_validation.ipynb`. Those notebooks can be found in the folder `notebooks`.
+
+Hopefully, the notebooks are clear enough, I've added a summary of the steps and conclusions at the beginning of each of them.
+As well as watermarks to check the versions of the packages used.
+
 
 ## Task 3 - CI/CD Deployment plan
 
@@ -41,5 +50,3 @@ can be seen in `tests/test_orm.py`. To run the test and check that is working pr
 ```
 make run_unit_tests
 ```
-
-As you will see, everything will be in green, meaning that the test is running properly and the orm query is working.

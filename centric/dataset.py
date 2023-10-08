@@ -1,6 +1,8 @@
 """Functions realted to ETL and dataset processing."""
 import numpy as np
-from centric.conf import load_dataset_conf
+from centric.constants import CLASS_GROUP
+import tensorflow as tf
+from tensorflow.keras import layers
 
 
 def group_labels(y_labels: np.array) -> np.array:
@@ -13,7 +15,8 @@ def group_labels(y_labels: np.array) -> np.array:
         2 - One piece: Dress
         3 - Footwear: Sandal + Sneaker + Ankle boot
         4 - Bags: Bag
-    If we want to change this configuration in the future we can go to `conf/dataset.toml`
+    If we want to change this configuration in the future we can go to the constants file. A better way would be to store this
+    in a configuration file that could be loaded.
     To simplify this problem we are going to assume that all the instances in the dataset come with a class that can be
     converted, if not we would need to add further checks to this function and think what to do with the classes that can
     not be grouped.
@@ -24,7 +27,20 @@ def group_labels(y_labels: np.array) -> np.array:
     :return
         Numpy array with the same shape but with the classes grouped together
     """
-    classes_conf = load_dataset_conf()["classes"]
-    classes_conf = {int(k): int(v) for k, v in classes_conf.items()}
-    y_labels_grouped = np.vectorize(classes_conf.get)(y_labels)
+    y_labels_grouped = np.vectorize(CLASS_GROUP.get)(y_labels)
     return y_labels_grouped
+
+
+def rescale_data(data: np.array) -> np.array:
+    """
+    Preprocess the data to rescale to any dimensions and to divide it by 255, ready for the model.
+
+    :param data:
+        Numpy array with all the instances of the images
+    :return:
+        Images instances rescaled.
+    """
+    rescale = tf.keras.Sequential([layers.Rescaling(1.0 / 255)])
+
+    data_rescaled = rescale(data)
+    return data_rescaled
