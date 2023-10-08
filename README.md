@@ -14,7 +14,7 @@ I've created a Makefile file to make things simpler, to create an environment wi
 simply run the following commands:
 ```
 make create_environment
-source centric/bin/activate
+source centricvenv/bin/activate
 make install_requirements
 make add_kernel_to_jupyter
 make dev_install
@@ -44,9 +44,6 @@ team best practices and technologies that are currently being used. But they wor
 ## Task 4 - SQL and Django ORM query
 
 This task can be found in `docs/Task_4.md`.
-There has been created a source code and a test to check that the Django ORM query is working properly,
-the source code for retrieving the relevant information from the schema can be seen in: `source/dataset/orm.py` while the test
-can be seen in `tests/test_orm.py`. To run the test and check that is working properly, just run:
-```
-make run_unit_tests
-```
+The SQL query has been prettified but not tested in a proper system, as it's an indication on how to do the different joins
+and extract the relevant information. For the Django ORM, as it's the first time using that ORM I've done my best while looking at the
+documentation and online examples, it would be great to learn more about this if I were to join the team :)
