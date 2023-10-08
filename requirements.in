@@ -1,4 +1,5 @@
 pandas
+black
 numpy
 scikit-learn
 matplotlib
@@ -10,3 +11,6 @@ watermark
 jupyter_contrib_nbextensions
 pydantic>=1.4.0,<2
 keras
+tensorflow
+tomli
+pytest
