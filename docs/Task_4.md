@@ -81,7 +81,7 @@ FROM
 **Django ORM**
 
 Even though I haven't used Django ORM I'm going to give it a try for the sake of learning and to follow
-the team's stack and technology. I've been checking ORM [documentation](https://docs.djangoproject.com/en/4.2/topics/db/queries/) to write the following query,
+the team's stack and technology. I've been checking the ORM [documentation](https://docs.djangoproject.com/en/4.2/topics/db/queries/) to write the following query,
 supposedly it will be creating the SQL query on the back, which will make this simpler.
 
 ```Python
